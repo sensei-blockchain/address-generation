@@ -1,9 +1,6 @@
 const envConfig = require('./config/envConfig');
-const generateChildNode = require('./src/extendedKeysGenerator/generateChilNode');
-const generateXPriv = require('./src/extendedKeysGenerator/generateXPriv');
-const generateXPub = require('./src/extendedKeysGenerator/generateXPub');
-const generatePrivateKey = require('./src/keysGenerator/privateKey');
-const generatePublicKey = require('./src/keysGenerator/publicKey');
+const { generateChildNode, generateXPriv, generateXPub } = require('./src/extendedKeysGenerator/generateExtendedKeys');
+const { generatePrivateKey, generatePublicKey } = require('./src/keysGenerator/generateKeys');
 const generateWalletAddress = require('./src/addressGenerator/generateAddress');
 const { isValidMnemonic, isValidPath } = require('./src/validator/validate');
 
