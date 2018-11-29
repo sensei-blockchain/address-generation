@@ -2,7 +2,6 @@ const { address, crypto } = require('bitcoinjs-lib');
 const networks = require('../networks/networks');
 const ethUtils = require('ethereumjs-util');
 
-
 const generateBTCCloneAddress = (publicKey, environment, coin) => {
   const publicKeyBuff = new Buffer(publicKey, 'hex');
   const network = environment === 'testnet' ? networks[coin].testnet : networks[coin].mainnet;

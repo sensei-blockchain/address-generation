@@ -1,20 +1,8 @@
 const bip39 = require('bip39');
 const bipPath = require('bip32-path');
 
-const isValidMnemonic = mnemonic => {
-  if (!bip39.validateMnemonic(mnemonic)) {
-    throw new Error('Invalid Mnemonic');
-  } else {
-    return true;
-  }
-}
+const isValidMnemonic = mnemonic => bip39.validateMnemonic(mnemonic);
 
-const isValidPath = path => {
-  if (!bipPath.validateString(path)) {
-    throw new Error('Invalid Derivation Path');
-  } else {
-    return true;
-  }
-}
+const isValidPath = path => bipPath.validateString(path);
 
 module.exports = { isValidMnemonic, isValidPath };
