@@ -12,8 +12,8 @@ const schema = {
     doc: 'Path for which xpriv, xpub, public key, private key and address will be derived',
     format: String,
     default: 'm/0',
-    env: 'PATH',
-    arg: 'path',
+    env: 'DERIVATION_PATH',
+    arg: 'derivation_path',
   },
   coin_symbol: {
     doc: 'Symbol of coin in upper case',
